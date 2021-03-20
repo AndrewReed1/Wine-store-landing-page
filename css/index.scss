@@ -1,0 +1,367 @@
+// imports
+@import 'normalize.scss';
+// mixins
+@mixin montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin playFair {
+    font-family: 'Playfair Display', serif;
+}
+@mixin full-width { 
+    width: 100%;
+}
+@mixin content-width {
+    width: 1110px;
+}
+
+// 1-st page settings
+.first-page {
+    background: url('/img/bgp.png') no-repeat 50% 50%;
+    background-size: cover;
+    @include full-width;
+    @include montserrat;
+    .container-1 {
+        @include content-width;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        .header {
+            padding-top: 30px;
+            .contacts-info {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 500;
+                font-size: 13px;
+                padding-bottom: 20px;
+                line-height: 19px;
+                color: white;
+            }
+            .navbar {
+                font-weight: 400;
+                font-size: 14px;
+                display: flex;
+                justify-content: space-around;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                line-height: 21px;
+                .navbar-link {
+                    text-decoration: none;
+                    color: rgb(228, 228, 228);
+                    padding: 13px 0px;
+                    text-align: center;
+                    width: 25%;
+                    &:hover {
+                        color: white;
+                    }
+                }
+                .navbar-link + .navbar-link  {
+                    border-left: 1px solid white;
+                }
+            }
+        }
+        .main-content {
+            padding-top: 590px;
+            padding-bottom: 143px;
+            font-weight: 500;
+            font-size: 16px;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            .main-content-link {
+               background-color: rgb(153,132,49);
+               padding: 15px 30px;
+               text-decoration: none;
+               color: rgb(228, 228, 228);
+               line-height: 20px;
+               letter-spacing: 0.05em;
+               &:hover {
+                color: white;
+               }
+            }
+            .main-content-link + .main-content-link {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+// 2-nd page settings
+.second-page{
+    background-color: rgb(40,40,40);
+    @include full-width;
+    .container-2 {
+        @include content-width;
+        margin: 0 auto;
+        padding: 100px;
+        color: white;
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid white;
+            padding: 0 185px;
+            .text-1 {
+                margin-top: 60px;
+                margin-bottom: 80px;
+                font-size: 34px;
+                line-height: 56px;
+                @include playFair;
+            }
+            .text-2 {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 50px;
+                text-align: center;
+                @include montserrat;
+            }
+            .img {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+// 3-rd page settings
+.third-page {
+    @include full-width;
+    background-color: rgb(230,227,196);
+    color: black;
+    padding: 70px 0px;
+    .container-3 {
+        @include content-width;
+        margin: 0 auto;
+        display: flex;
+        border-top: 1px solid rgb(153,132,49);
+        border-bottom: 1px solid rgb(153,132,49);
+        padding: 60px 0px;
+        .info {
+            width: 50%;
+            .info-wrapper {
+                width: 85%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include montserrat;
+                .info-1{
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 30px;
+                }
+                .info-2 {
+                    font-size: 36px;
+                    line-height: 54px;
+                    margin-bottom: 60px;
+                }
+                .info-3 {
+                    font-size: 14px;
+                    line-height: 21px;
+                    margin-bottom: 30px;
+                }
+                .block-info {
+                    display: flex;
+                    .year {
+                        font-size: 14px;
+                        line-height: 21px;
+                        padding: 26px 24px;
+                        border-right: 1px solid black;
+                    }
+                    .discription {
+                        padding: 15px 30px;
+                        .wine-name {
+                            @include playFair;
+                            font-size: 18px;
+                            line-height: 27px;
+                            margin-bottom: 5px;
+                        }
+                        .wine-discription {
+                            @include montserrat;
+                            font-size: 14px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+                .block-info + .block-info {
+                     border-top: 1px solid black;
+                }
+                .text {
+                    margin-top: 30px;
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+                .link-wrapper {
+                    margin-top: 60px;
+                    a {
+                        text-decoration: none;
+                        background-color: rgb(153,132,49);
+                        color: rgb(228, 228, 228);
+                        padding: 15px 30px;
+                        font-size: 16px;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .pictures {
+            width: 50%;
+            .big-picture img {
+                width: 100%;
+                height: 100%;
+            }
+            .little-pictures {
+                padding-top: 30px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+// 4-th page settings
+.fourth-page {
+    background-color: rgb(40,40,40);
+    @include full-width;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    .container-4 {
+        @include content-width;
+        @include montserrat;
+        color: white;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid white;
+        .main-info {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 50%;
+            .text {
+                margin-top: 30px;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+            }
+            .person-info {
+                display: flex;
+                margin-top: 80px;
+                width: 100%;
+                justify-content: space-between;
+                font-size: 13px;
+                line-height: 20px;
+                .info {
+                    width: 45%;
+                    input {
+                        border: none;
+                        background: rgb(40,40,40);
+                        padding: 10px 0px;
+                        padding-right: 100px;
+                        color: #fff;
+                        outline: none;
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+            .address {
+                select {
+                    width: 100%;
+                    margin-top: 30px;
+                    border: none;
+                    background: rgb(40,40,40);
+                    border-bottom: 1px solid white;
+                    outline: none;
+                    color: #fff;
+                    padding: 10px 0px;
+                    font-size: 13px;
+                    line-height: 20px;
+                }
+
+            }
+            .link {
+                width: 100%;
+                border: 1px solid white;
+                margin-top: 50px;
+                padding: 15px 0px;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 50px;
+                font-size: 16px;
+                line-height: 20px;
+                a {
+                    text-decoration: none;
+                    color: rgb(228, 228, 228);
+                    text-transform: uppercase;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .add-info {
+            display: flex;
+            justify-content: space-between;
+            .text {
+                @include playFair;
+                font-size: 36px;
+                line-height: 54px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        img {
+            height: 140px;
+        }
+    }
+}
+
+// footer page settings
+.footer {
+    background-color: rgb(153,132,49);
+    @include full-width;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container-5 {
+        @include content-width;
+        @include montserrat;
+        margin: 0 auto;
+        .navigation {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            a {
+                text-decoration: none;
+                color: rgb(228, 228, 228);
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+        .contacts {
+            display: flex;
+            justify-content: space-around;
+            height: 50px;
+            color: white;
+            border-bottom: 1px solid white;
+            .info {
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .info + .info {
+                border-left: 1px solid white;
+            }
+            .link-wrapper {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+        }
+    }
+}
