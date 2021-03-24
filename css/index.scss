@@ -1,18 +1,9 @@
-// imports
 @import 'normalize.scss';
-// mixins
-@mixin montserrat {
-    font-family: 'Montserrat', sans-serif;
-}
-@mixin playFair {
-    font-family: 'Playfair Display', serif;
-}
-@mixin full-width { 
-    width: 100%;
-}
-@mixin content-width {
-    width: 1110px;
-}
+// Mixins
+@mixin montserrat { font-family: 'Montserrat', sans-serif; }
+@mixin playFair { font-family: 'Playfair Display', serif; }
+@mixin full-width { width: 100%; }
+@mixin content-width { width: 1100px; }
 
 // 1-st page settings
 .first-page {
